@@ -12,14 +12,19 @@ Logujemy się do Mikrotika i wykonujemy następujące kroki.
 2. Dodajemy użytkownika
    
    /system/users/
+   
    Name: user_git
+   
    Grup: FULL
+   
    Allowed Address: 192.168.1.100/32
+   
    Password: P@$$w0rd
 
-3. Dodajemy do Firewalla reguły
+4. Dodajemy do Firewalla reguły
    
    /ip/firewall/filter/
+   
    add action=drop chain=forward comment=TV disabled=yes out-interface-list=WAN src-address=192.168.1.97
    
    add action=drop chain=forward comment=Tablet disabled=yes out-interface-list=WAN src-address=192.168.1.90

@@ -21,9 +21,10 @@ Logujemy się do Mikrotika i wykonujemy następujące kroki.
    
    /ip/firewall/filter/
    add action=drop chain=forward comment=TV disabled=yes out-interface-list=WAN src-address=192.168.1.97
+   
    add action=drop chain=forward comment=Tablet disabled=yes out-interface-list=WAN src-address=192.168.1.90
-   add action=drop chain=forward comment=Telefon disabled=yes out-interface-list=WAN src-address=192.168.1.90
 
+   add action=drop chain=forward comment=Telefon disabled=yes out-interface-list=WAN src-address=192.168.1.90
 
 Konfiguracja skryptów PHP.
 

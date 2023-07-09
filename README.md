@@ -4,12 +4,12 @@ Konfiguracja Mikrotika do współpracy z kodem PHP.
 
 Logujemy się do Mikrotika i wykonujemy następujące kroki.
 
-1. Włączamy service i dajemy dostęp tylko z określonego IP
+1. Włączamy service i dajemy dostęp tylko z określonego IP (Adres IP serwera WWW)
    
    /ip service
    set api address=192.168.1.100/32
 
-2. Dodajemy użytkownika
+2. Dodajemy użytkownika (Adres IP serwera WWW)
    
    /system/users/
    
@@ -35,9 +35,9 @@ Konfiguracja skryptów PHP.
 
 1. Kopiujemy pliki repo na serwer WWW z obsługą PHP.
 
-2. W pliku index.php i stan.php poprawiamy
+2. W pliku index.php i stan.php poprawiamy - IP routera, login i ustawione hasło
    
    $API->connect('192.168.1.1', 'user_git', 'P@$$w0rd')
 
-   Podając IP routera, login i ustawione hasło
+   
 

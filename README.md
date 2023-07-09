@@ -4,26 +4,31 @@ Konfiguracja Mikrotika do współpracy z kodem PHP.
 
 Logujemy się do Winboxa i wykonujemy następujące kroki.
 
-1. Włączamy service i dajemy dostęp tylko z określonego IP 
+1. Włączamy service i dajemy dostęp tylko z określonego IP
+   
 /ip service
 set api address=192.168.1.100/32
 
-2. Dodajemy użytkownika
+3. Dodajemy użytkownika
+   
 /system/users/
 Name: user_git
 Grup: FULL
 Allowed Address: 192.168.1.100/32
 Password: P@$$w0rd
 
-3. Dodajemy do Firewalla reguły
+5. Dodajemy do Firewalla reguły
+   
 /ip/firewall/filter/
 add action=drop chain=forward comment=TV disabled=yes out-interface-list=WAN src-address=192.168.1.97
 add action=drop chain=forward comment=Tablet disabled=yes out-interface-list=WAN src-address=192.168.1.90
 add action=drop chain=forward comment=Telefon disabled=yes out-interface-list=WAN src-address=192.168.1.90
 
-4. Kopiujemy pliki repo na serwer WWW z obsługą PHP.
+7. Kopiujemy pliki repo na serwer WWW z obsługą PHP.
 
-5. W pliku index.php i stan.php poprawiamy
+8. W pliku index.php i stan.php poprawiamy
+   
 $API->connect('192.168.1.1', 'user_git', 'P@$$w0rd')
+
 Podając IP routera, login i ustawione hasło
 

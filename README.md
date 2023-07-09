@@ -39,5 +39,5 @@ Konfiguracja skryptów PHP.
    
    $API->connect('192.168.1.1', 'user_git', 'P@$$w0rd')
 
-   
+3. W pliku .htaccess dodajemy adres IP z których mamy mieć dostęp do skryptów
 

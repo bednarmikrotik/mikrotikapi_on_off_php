@@ -1,0 +1,8 @@
+<IfModule authz_core_module>
+	<RequireAll>
+		Require ip 192.168.1.104
+	</RequireAll>
+	<RequireAll>
+		Require ip 192.168.1.91
+	</RequireAll>
+</IfModule>
